@@ -1,6 +1,21 @@
+
+import { useState, useEffect } from "react"
 import GameList from "./components/GameList"
 
-export default function Home() {
+
+export default async function Home() {
+
+  
+
+    let fetchedPokemon = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+    console.log(fetchedPokemon.json);
+    
+ 
+
+  
+
+
+
   return (
     <main>
       <h1> Welcome to the Poke Profiler! </h1>

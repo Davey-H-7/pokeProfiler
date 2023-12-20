@@ -3,9 +3,9 @@ import Game from "./Game"
 const GameList = () => {
 
     const games = [
-        {version: "Red", image: ""},
-        {version: "Blue", image: ""},
-        {version: "Yellow", image: ""}
+        {version: "Red", image: "", generation: 1},
+        {version: "Blue", image: "", generation: 1},
+        {version: "Yellow", image: "", generation: 1}
     ]
 
     const gameNodes = games.map((game, index) => {
