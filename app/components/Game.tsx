@@ -1,7 +1,10 @@
 const Game = ({game}: {game:any}) => {
+
+    let url = `/profiles/${game.generation}`
+
     return ( 
         <li className="gameListItem">
-            <h1>{game.version}</h1>
+            <a href = {url}> {game.version} </a>
         </li>
      );
 }
