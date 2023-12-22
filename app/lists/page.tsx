@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import PokemonList from './pokemonList'
 
-export default async function Profiles() {
+export default async function Lists() {
 
   const fetchedPokemon = await getPokemon()
 

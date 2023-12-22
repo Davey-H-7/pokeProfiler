@@ -1,10 +1,12 @@
+import Link from 'next/link'
+
 const Game = ({game}: {game:any}) => {
 
-    let url = `/profiles/${game.generation}`
+    let url = `/lists?gen=${game.generation}`
 
     return ( 
         <li className="gameListItem">
-            <a href = {url}> {game.version} </a>
+            <Link href = {url}> {game.version} </Link>
         </li>
      );
 }

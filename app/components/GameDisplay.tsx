@@ -1,6 +1,6 @@
 import Game from "./Game"
 
-const GameList = () => {
+const GameDisplay = () => {
 
     const games = [
         {version: "Red", image: "", generation: 1},
@@ -22,4 +22,4 @@ const GameList = () => {
      );
 }
  
-export default GameList;
+export default GameDisplay;
