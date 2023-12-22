@@ -1,6 +1,7 @@
-import GameList from "./components/GameList"
+import GameList from "./components/GameDisplay"
 
 export default function Home() {
+
   return (
     <main>
       <h1> Welcome to the Poke Profiler! </h1>
