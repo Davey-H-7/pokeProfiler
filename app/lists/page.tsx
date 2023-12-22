@@ -10,10 +10,8 @@ export default async function Lists() {
   
 
     async function getPokemon () {
-      const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1019&offset=0')
+      const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1024&offset=0')
       
-    
-  
     if (!res.ok) {
       throw new Error('Failed to fetch data')
     }
