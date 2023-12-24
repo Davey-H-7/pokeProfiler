@@ -56,12 +56,12 @@ const PokemonList = ({pokemon}: {pokemon:[]}) => {
    
 
     return (
-    <>
-        <h1> Generation {gen} Pokemon</h1>
-        <ol>
-        {pokeNodes}
-        </ol>
-    </> 
+    <div className ="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 text-center">
+        <h1 className="text-2xl font-light text-black sm:text-4xl sm:leading-tight mt-5"> Generation {gen} Pokemon</h1>
+        <div className = "grid items-center max-w-4xl grid-cols-2 gap-4 mx-auto mt-12 md:mt-10 md:grid-cols-4">
+            {pokeNodes}
+        </div>
+    </div> 
     );
 }
  
