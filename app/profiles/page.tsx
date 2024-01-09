@@ -1,6 +1,7 @@
 'use client'
 
 import { useSearchParams } from "next/navigation";
+import PokemonDetails from "./components/PokemonDetails";
 
 
 export default function Profile () {
@@ -9,27 +10,15 @@ export default function Profile () {
   
   const pokemonName = searchParams.get("name") as string;
 
-  const profileData = getProfileData(pokemonName)
-
-  console.log(profileData);
     return (
 
         <>
-        <h1> {pokemonName} profile </h1>
+        <h1> {pokemonName}s profile </h1>
+        <PokemonDetails name = {pokemonName}/>
         </>
     )
 
 }
-  
-      async function getProfileData (name:string) {
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-        
-      if (!res.ok) {
-        throw new Error('Failed to fetch data')
-      }
-      
-      return res.json()
 
-    }
 
 
