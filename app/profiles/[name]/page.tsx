@@ -1,7 +1,15 @@
-
 import { GetStaticProps } from "next";
 
+export default function Profile () {
 
+    return (
+
+        <>
+        <h1> profile </h1>
+        </>
+    )
+
+}
   
       async function getProfileData (name:string) {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -17,7 +25,7 @@ import { GetStaticProps } from "next";
     }
 
     
-    export const getStaticProps: GetStaticProps = async (context) => {
+    export async function generateStaticParams(context:any) {
         const itemName = context.params?.name as string;
         
         const data = await getProfileData(itemName);
@@ -36,5 +44,4 @@ import { GetStaticProps } from "next";
       }
     }
     }
-
 
