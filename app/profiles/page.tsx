@@ -17,8 +17,4 @@ export default function Profile () {
         <PokemonDetails name = {pokemonName}/>
         </>
     )
-
 }
-
-
-
