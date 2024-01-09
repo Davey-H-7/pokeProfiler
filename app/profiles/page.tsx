@@ -1,25 +1,20 @@
+'use client'
+
+import { useSearchParams } from "next/navigation";
+import PokemonDetails from "./components/PokemonDetails";
 
 
-export default async function Profiles() {
+export default function Profile () {
 
-  const pokemonDetails = await getDetails()
-
-    async function getDetails () {
-      const res = await fetch('')
-      
-    if (!res.ok) {
-      throw new Error('Failed to fetch data')
-    }
-
-    return res.json()
-
-  }
+  const searchParams = useSearchParams();
   
-  
-  return (
-    <main>
-      <h1> </h1>
-      <Profile details = {pokemonDetails}/>
-    </main>
-  )
+  const pokemonName = searchParams.get("name") as string;
+
+    return (
+
+        <>
+        <h1> {pokemonName}s profile </h1>
+        <PokemonDetails name = {pokemonName}/>
+        </>
+    )
 }
