@@ -12,9 +12,9 @@ export default function Profile () {
 
     return (
 
-        <>
-        <h1> {pokemonName}s profile </h1>
+        <div className ="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 text-center">
+        <h1 className="text-2xl font-light text-black sm:text-4xl sm:leading-tight mt-5"> {pokemonName} </h1>
         <PokemonDetails name = {pokemonName}/>
-        </>
+        </div>
     )
 }

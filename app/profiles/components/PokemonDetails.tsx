@@ -1,13 +1,16 @@
+import Image from "next/image";
+
 export default async function PokemonDetails({name}:{name:string}) {
 
     const profileData = await getProfileData(name)
 
     console.log(profileData);
+    const imgURL = profileData.sprites.other['official-artwork'].front_default
 
     
     return (  
         <>
-        <h1>data</h1>
+        <Image src = {imgURL} width={500} height = {500} alt="an image of the pokemon"/>
         </>
     );
 }
