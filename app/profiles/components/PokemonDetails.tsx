@@ -13,8 +13,8 @@ export default async function PokemonDetails({name}:{name:string}) {
     let secondaryType = null
 
     if (profileData.types[1]){
-    secondaryType = profileData.types[1].type.name}
-    const secondaryTypeCapitalized = secondaryType.charAt(0).toUpperCase() + secondaryType.slice(1);
+    secondaryType = profileData.types[1].type.name;
+    const secondaryTypeCapitalized = secondaryType.charAt(0).toUpperCase() + secondaryType.slice(1);}
 
     const hp = profileData.stats[0].base_stat
     const attack = profileData.stats[1].base_stat
