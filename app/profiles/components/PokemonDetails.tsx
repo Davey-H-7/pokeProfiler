@@ -1,10 +1,9 @@
-import Image from "next/image";
+import PokemonImage from "./PokemonImage";
 import PokemonTypes from "./PokemonTypes";
 
 export default async function PokemonDetails({name}:{name:string}) {
 
     const profileData = await getProfileData(name)
-    const imgURL = profileData.sprites.other['official-artwork'].front_default
 
     const hp = profileData.stats[0].base_stat
     const attack = profileData.stats[1].base_stat
@@ -18,9 +17,8 @@ export default async function PokemonDetails({name}:{name:string}) {
     return (  
         <div className="Details flex flex-col justify-center">
             <PokemonTypes types ={profileData.types}/>
-            <div className="Image flex justify-center">
-                <Image src = {imgURL} width={500} height = {500} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="an image of the pokemon"/>
-            </div>
+            <PokemonImage imgURL = {profileData.sprites.other['official-artwork'].front_default}/>
+
             <div className ="Stats flex flex-col justify-center gap-5">
                 <p>HP: {hp} </p>
                 <p>Attack: {attack} </p>
