@@ -13,9 +13,9 @@ export default function Profile () {
   
     return (
 
-        <div className ="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 text-center">
-        <h1 className="text-2xl font-light text-black sm:text-4xl sm:leading-tight mt-5"> {pokemonNameCapitalized} </h1>
-        <PokemonDetails name = {pokemonName} />
+        <div className ="px-4 mx-auto sm:w-6/12 w-10/12 sm:p-3 p-5 text-center text-white bg-gray-600 rounded-3xl border-solid border-4 border-black">
+          <h1 className="font-light text-4xl sm:leading-tight mt-5"> {pokemonNameCapitalized} </h1>
+          <PokemonDetails name = {pokemonName} />
         </div>
     )
 }

@@ -37,7 +37,7 @@ const GameDisplay = () => {
 
     return ( 
         <div className="gameList px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 text-center">
-          <h1 className="text-2xl font-light text-black sm:text-4xl sm:leading-tight mt-5"> Select a game </h1>
+          <h3 className="text-m font-light text-black sm:text-xl sm:leading-tight mt-5"> Select a game below to see its Pokemon </h3>
           <ul className = "grid items-center max-w-4xl grid-cols-2 gap-4 mx-auto mt-12 md:mt-10 md:grid-cols-3">
             {gameNodes}
           </ul>
