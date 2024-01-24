@@ -9,7 +9,7 @@ export default function PokemonTypes({types}:{types:Array<any>}) {
     const secondaryTypeCapitalized = secondaryType.charAt(0).toUpperCase() + secondaryType.slice(1);}
 
 return(
-    <div className ="Types flex justify-center gap-5">
+    <div className ="Types flex justify-center gap-5  py-3">
     <p>Primary type: {primaryTypeCapitalized} </p>
     {types[1]? <p>Secondary type: {secondaryTypeCapitalized} </p>: <p></p>}
 </div>
