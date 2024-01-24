@@ -18,3 +18,10 @@ return(
 </div>
 )
 }
+
+function CheckStats (stats:Array<any>){
+    for (let i = 0; i < 5; i++) {
+        
+
+    }
+}

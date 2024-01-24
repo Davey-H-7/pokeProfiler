@@ -23,7 +23,6 @@ export default async function Lists() {
   
   return (
     <main>
-      <h1> </h1>
       <PokemonList pokemon = {pokemon}/>
     </main>
   )
